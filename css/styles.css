@@ -19,6 +19,7 @@ red: #D71F2B
   align-items: center;
   justify-content: center;
   width: 100%;
+  min-width: 400px;
   height: 200px;
   color: white;
   background-color: #D71F2B;
@@ -51,11 +52,13 @@ red: #D71F2B
   background-color: white;
   min-height: 100px;
   min-width: 200px;
+  font-size: 1.5em;
 }
 
 .new-account, .transaction {
   display: flex;
   flex-direction: column;
+  height: 200px;
 }
 
 .btn {

@@ -16,6 +16,11 @@ BankAccount.prototype.getCurrentBalance = function() {
   return this.balance;
 }
 
+function displayBalance(account){
+  $("#balance").text(account.balance);
+}
+
+
 $(document).ready(function(){
 
   $("#new-account-form").submit(function(event){
@@ -23,13 +28,24 @@ $(document).ready(function(){
 
     var user = $("#user").val();
     var initial = parseFloat($("#initial").val());
+    $("#user").val("");
+    $("#initial").val("");
 
-  });
-  $("#transaction-form").submit(function(event){
-    event.preventDefault();
+    var newAccount = new BankAccount(initial, user);
+    displayBalance(newAccount);
 
-    var deposit = parseFloat($("#deposit").val());
-    var withdraw = parseFloat($("#withdraw").val());
+    $("#transaction-form").submit(function(event){
+      event.preventDefault();
+  
+      var deposit = parseFloat($("#deposit").val());
+      var withdraw = parseFloat($("#withdraw").val());
+      $("#deposit").val("");
+      $("#withdraw").val("");
 
+      deposit ? newAccount.deposit(deposit) : null;
+      withdraw ? newAccount.withdraw(withdraw) : null;
+      displayBalance(newAccount);
+  
+    });
   });
 })
