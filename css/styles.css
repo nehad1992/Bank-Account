@@ -1,0 +1,66 @@
+/*
+yellow: #FCC60D
+beige: #F6FAF1
+dark-grey: #786F70
+red: #D71F2B
+*/
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#F6FAF1;
+}
+
+.title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  color: white;
+  background-color: #D71F2B;
+  margin-top: 40px;
+  border: 5px solid #FCC60D;
+}
+
+.actions {
+  min-height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.balance-display {
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#balance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #786F70;
+  background-color: white;
+  min-height: 100px;
+  min-width: 200px;
+}
+
+.new-account, .transaction {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  border-radius: 0;
+  background-color: #786F70;
+  color: white;
+}
+

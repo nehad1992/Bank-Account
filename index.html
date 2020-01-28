@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>Bank Account</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+          <h1> Welcome to the Epicodus branch of Wells Fargo</h1>
+      </div>
+      <div class="actions">
+
+        <div class="new-account">
+          <form id="new-account-form">
+            <h5>Register a new account:</h5>
+            <div class="form-group">
+              <label for="user">Name: </label>
+              <input id="user" type="text">
+            </div>
+            <div class="form-group">
+              <label for="initial">Initial Deposit: </label>
+              <input id="initial" type="text">
+            </div>
+            <button class="btn" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="transaction">
+          <form id="transaction-form">
+            <h5>Deposit or withdraw funds:</h5>
+            <div class="form-group">
+              <label for="deposit">Deposit Amount: </label>
+              <input id="deposit" type="text">
+            </div>
+            <div class="form-group">
+              <label for="withdraw">Withdraw Amount: </label>
+              <input id="withdraw" type="text">
+            </div>
+            <button class="btn" type="submit">Submit</button>
+          </form>
+        </div>
+
+      </div>
+      <div class="balance-display">
+        <h5>Current Balance:</h5>
+        <div id="balance"></div>
+      </div>
+
+    </div>
+  </body>
+</html>
